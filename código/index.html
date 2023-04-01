@@ -1,18 +1,25 @@
 <html>
 <head>
   <title>Barra de carga con quantum</title>
+  <h1 style="text-align: center; background-image: linear-gradient(to right, red, yellow, green,skyblue, indigo, violet); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Comparativa de la velocidad de carga</h1>
+  
+  <h2 style="color: green;">Quantum 1</h2> 
+  <h2 style="color: blue;">Quantum 2</h2>
   <script type="text/javascript">
     function cargar() {
       var quantum1 = prompt("Ingresa el quantum de la primera ventana:", "1000");
       var quantum2 = prompt("Ingresa el quantum de la segunda ventana:", "2000");
       
+      //Definición de la posición de la ventana 1
+      //Se agrega left=700, top=500 para centrar las ventanas abiertas por el navegardor
+
       // Crear la primera ventana
-      var ventana1 = window.open("", "Ventana 1", "width=300, height=200");
+      var ventana1 = window.open("", "Ventana 1","width=300, height=200, left=700, top=450");
       ventana1.document.write("<h1>Ventana 1</h1>");
       ventana1.document.write("<div id='barra1'></div>");
       
       // Crear la segunda ventana
-      var ventana2 = window.open("", "Ventana 2", "width=300, height=200");
+      var ventana2 = window.open("", "Ventana 2", "width=300, height=200,left=1200, top=450");
       ventana2.document.write("<h1>Ventana 2</h1>");
       ventana2.document.write("<div id='barra2'></div>");
       
@@ -45,6 +52,7 @@
       }, quantum2/10);
     }
   </script>
+  <link href="test.css" rel="stylesheet" type="text/css">
 </head>
 <body onload="cargar()">
 </body>

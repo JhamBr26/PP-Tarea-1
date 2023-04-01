@@ -1,0 +1,6 @@
+  h2 {
+    display: inline-block; /*Permite Digitar más de un titulo de modo lineal*/
+    /*Permite Centrar el titulo 2 según la cantidad de espacios asignados*/
+    padding-left: 200px;
+    padding-right: 160px;
+  }
