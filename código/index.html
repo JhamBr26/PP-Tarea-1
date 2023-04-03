@@ -1,15 +1,29 @@
-<html>
-<head>
-  <title>Barra de carga con quantum</title>
-  <h1 style="text-align: center; background-image: linear-gradient(to right, red, yellow, green,skyblue, indigo, violet); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Comparativa de la velocidad de carga</h1>
-  
-  <h2 style="color: green;">Quantum 1</h2> 
-  <h2 style="color: blue;">Quantum 2</h2>
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="test.css" rel="stylesheet" type="text/css" />
+		<title>Barra de carga con quantum</title>
+	</head>
+	<body onload="cargar()">
+		<h1>Comparativa de la velocidad de carga</h1>
 
-  
-  <link href="test.css" rel="stylesheet" type="text/css">
-  <script src="main.js"  type="text/javascript"></script>
-</head>
-<body onload="cargar()">
-</body>
+		<div>
+			<div class="container">
+				<div class="caja">
+					<h2 style="color: green">Quantum 1</h2>
+					<div id="barra1"></div>
+				</div>
+				<div class="caja">
+					<h2 style="color: blue">Quantum 2</h2>
+					<div id="barra2"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="funcionalidad.js"></script>
+		<!-- <script src="funcion.js"></script> -->
+	</body>
 </html>
