@@ -1,6 +1,6 @@
 function cargar() {
-	var quantum1 = prompt('Ingresa el quantum de la primera ventana:', '1000');
-	var quantum2 = prompt('Ingresa el quantum de la segunda ventana:', '2000');
+	var quantum1 = prompt('Ingresa el quantum de la primera ventana:', '1');
+	var quantum2 = prompt('Ingresa el quantum de la segunda ventana:', '2');
 
 	//Definición de la posición de la ventana 1
 	//Se agrega left=700, top=500 para centrar las ventanas abiertas por el navegardor
@@ -17,7 +17,7 @@ function cargar() {
 		barra1.style.width = porcentaje1 + '%';
 		barra1.style.backgroundColor = 'green';
 		barra1.style.height = '10px';
-	}, quantum1 / 10);
+	}, quantum1 * 100);
 
 	// Animar la barra de carga de la segunda ventana
 	var barra2 = document.querySelector('#barra2');
@@ -31,7 +31,7 @@ function cargar() {
 		barra2.style.width = porcentaje2 + '%';
 		barra2.style.backgroundColor = 'blue';
 		barra2.style.height = '10px';
-	}, quantum2 / 10);
+	}, quantum2 * 100);
     cargar2(quantum1 , quantum2);
 }
 
