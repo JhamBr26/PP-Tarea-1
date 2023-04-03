@@ -2,6 +2,7 @@ function cargar() {
     var quantum1 = prompt("Ingresa el quantum de la primera ventana:", "1000");
     var quantum2 = prompt("Ingresa el quantum de la segunda ventana:", "2000");
     
+    
     //Definición de la posición de la ventana 1
     //Se agrega left=700, top=500 para centrar las ventanas abiertas por el navegardor
 
