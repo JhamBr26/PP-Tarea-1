@@ -1,30 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="test.css" rel="stylesheet" type="text/css" />
-		<title>Barra de carga con quantum</title>
-	</head>
-	<body onload="cargar()">
-		<h1>Comparativa de la velocidad de carga</h1>
+<html>
 
-		<div>
-			<div class="container">
-				<div class="caja">
-					<h2 style="color: green">Quantum 1</h2>
-					<div id="barra1"></div>
+<head>
+	<title>Barra de carga con quantum</title>
+	<script type="text/javascript">
+		function cargar() {
+			var quantum1 = prompt("Ingresa el quantum de la primera ventana:", "1");
+			var quantum2 = prompt("Ingresa el quantum de la segunda ventana:", "2");
 
-				</div>
-				<div class="caja">
-					<h2 style="color: blue">Quantum 2</h2>
-					<div id="barra2"></div>
-				</div>
-			</div>
-		</div>
+			// Crear la primera ventana
+			var ventana1 = window.open("", "Ventana 1", "width=400, height=200");
+			ventana1.document.write("<head><link rel='stylesheet' href='style.css'></head>");
+			ventana1.document.write("<h1>Proceso 1</h1>");
+			ventana1.document.write("<div id='barra1' class=''></div><br>");
+			ventana1.document.write("<div id='pbarra1'></div>");
 
-		<script src="funcionalidad.js"></script>
-		<!-- <script src="funcion.js"></script> -->
-	</body>
+			// Crear la segunda ventana
+			var ventana2 = window.open("", "Ventana 2", "width=400, height=200, left=" + (window.screen.width - 400));
+			ventana2.document.write("<head><link rel='stylesheet' href='style.css'></head>");
+			ventana2.document.write("<h1>Proceso 2</h1>");
+			ventana2.document.write("<div id='barra2'></div><br>");
+			ventana2.document.write("<div id='pbarra2'></div>");
+
+			// Seleccionando las etiquetas de los porcentajes de cada barra
+			var pbarra1 = ventana1.document.querySelector("#pbarra1");
+			var pbarra2 = ventana2.document.querySelector("#pbarra2");
+
+			// Animar la barra de carga de la primera ventana
+			var barra1 = ventana1.document.getElementById("barra1");
+			var porcentaje1 = 0;
+			var intervalo1 = setInterval(function () {
+				if (porcentaje1 >= 100) {
+					clearInterval(intervalo1);
+					return;
+				}
+				porcentaje1 += 1;
+				barra1.style.width = porcentaje1 + "%";
+				pbarra1.innerText = porcentaje1 + "%";
+			}, quantum1 * 10);
+
+			// Animar la barra de carga de la segunda ventana
+			var barra2 = ventana2.document.getElementById("barra2");
+			var porcentaje2 = 0;
+			var intervalo2 = setInterval(function () {
+				if (porcentaje2 >= 100) {
+					clearInterval(intervalo2);
+					return;
+				}
+				porcentaje2 += 1;
+				barra2.style.width = porcentaje2 + "%";
+				pbarra2.innerText = porcentaje2 + "%";
+			}, quantum2 * 10);
+		}
+	</script>
+</head>
+
+<body onload="cargar()">
+</body>
+
 </html>

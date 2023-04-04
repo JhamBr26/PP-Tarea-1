@@ -1,0 +1,66 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: hsla(39, 100%, 80%, 1);
+
+    background: radial-gradient(circle, hsla(39, 100%, 80%, 1) 0%, hsla(31, 100%, 66%, 1) 100%);
+
+    background: -moz-radial-gradient(circle, hsla(39, 100%, 80%, 1) 0%, hsla(31, 100%, 66%, 1) 100%);
+
+    background: -webkit-radial-gradient(circle, hsla(39, 100%, 80%, 1) 0%, hsla(31, 100%, 66%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFDB98", endColorstr="#FFAB51", GradientType=1);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+}
+
+#barra1 {
+    display: flex;
+    height: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+
+    background: hsla(350, 73%, 47%, 1);
+
+    background: linear-gradient(180deg, hsla(350, 73%, 47%, 1) 0%, hsla(230, 33%, 47%, 1) 100%);
+
+    background: -moz-linear-gradient(180deg, hsla(350, 73%, 47%, 1) 0%, hsla(230, 33%, 47%, 1) 100%);
+
+    background: -webkit-linear-gradient(180deg, hsla(350, 73%, 47%, 1) 0%, hsla(230, 33%, 47%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#CF203E", endColorstr="#505DA0", GradientType=1);
+}
+
+#barra2 {
+    height: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+
+    background: hsla(179, 67%, 66%, 1);
+
+    background: linear-gradient(180deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+    background: -moz-linear-gradient(180deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+    background: -webkit-linear-gradient(180deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#6FE3E1", endColorstr="#5257E5", GradientType=1);
+}
+
+#pbarra1,
+#pbarra2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    align-items: center;
+}
