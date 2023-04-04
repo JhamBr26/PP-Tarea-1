@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     justify-content: center;
 
+
     background: hsla(39, 100%, 80%, 1);
 
     background: radial-gradient(circle, hsla(39, 100%, 80%, 1) 0%, hsla(31, 100%, 66%, 1) 100%);
@@ -63,4 +64,7 @@ h1 {
     flex-direction: column;
     font-weight: bold;
     align-items: center;
+
+    /* Agregar esta línea */
+
 }
