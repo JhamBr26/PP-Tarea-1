@@ -14,12 +14,18 @@
 			ventana1.document.write("<div id='barra1' class=''></div><br>");
 			ventana1.document.write("<div id='pbarra1'></div>");
 
+			// Mover la segunda ventana al centro
+			ventana1.moveTo((window.screen.width / 2) - 450, (window.screen.height / 2) - 100);
+
 			// Crear la segunda ventana
 			var ventana2 = window.open("", "Ventana 2", "width=400, height=200, left=" + (window.screen.width - 400));
 			ventana2.document.write("<head><link rel='stylesheet' href='style.css'></head>");
 			ventana2.document.write("<h1>Proceso 2</h1>");
 			ventana2.document.write("<div id='barra2'></div><br>");
 			ventana2.document.write("<div id='pbarra2'></div>");
+
+			// Mover la segunda ventana al centro
+			ventana2.moveTo((window.screen.width / 2) + 100, (window.screen.height / 2) - 100);
 
 			// Seleccionando las etiquetas de los porcentajes de cada barra
 			var pbarra1 = ventana1.document.querySelector("#pbarra1");
